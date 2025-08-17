@@ -1,6 +1,6 @@
 import React, { useState, useContext, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import { userDataContext } from "../context/userContext";
+import { userDataContext } from "../context/UserContext";
 
 import Navbar from "../components/Navbar";
 import HistoryPanel from "../components/HistoryPanel";

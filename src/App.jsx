@@ -6,7 +6,7 @@ import Home from './Pages/Home'
 import Customize from './Pages/Customize'
 import { Navigate } from 'react-router-dom'
 
-import { userDataContext } from './context/userContext'
+import { userDataContext } from './context/UserContext'
 import Customize2 from './Pages/Customize2'
 
 const App = () => {
