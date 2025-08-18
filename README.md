@@ -41,8 +41,18 @@ The backend code is available here: [Assistica Backend GitHub](https://github.co
 
 ## Screenshots
 
-### Screenshot 1
-
 ### Signup Page
 
-![Signup Page](./Screeshots/signup.png)
+<img src="./Screeshots/signup.png" alt="Signup Page" width="400">
+
+## 🎨 Customize Your Assistant
+
+### 1️⃣ Select Your Assistant Image
+Choose an image for your assistant from the available options to give it a unique look.
+
+<img src="./Screeshots/Customize.png" alt="Select Assistant Image" width="400">
+
+### 2️⃣ Enter Your Assistant Name
+Give your assistant a name to personalize your interaction.
+
+<img src="./Screeshots/Customize2.png" alt="Enter Assistant Name" width="400">
