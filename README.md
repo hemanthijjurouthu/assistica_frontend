@@ -63,14 +63,18 @@ Give your assistant a name to personalize your interaction.
 
 ### 🖥 Virtual Assistant Interaction
 
-**Question:** What is Java?  
+**Question:** What is Java? 
+
 ![](./Screeshots/JavaQ.png)
 
-**Answer:** Java explained by Assistant  
+**Answer:** Java explained by Assistant 
+
 ![](./Screeshots/JavaA.png)
 
 **Question:** TUF-related query  
+
 ![](./Screeshots/TUF.png)
 
 **Answer:** TUF explained by Assistant  
+
 ![](./Screeshots/TUF2.png)
