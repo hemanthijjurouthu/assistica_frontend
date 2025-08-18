@@ -40,6 +40,8 @@ Think of it as your personal **AI-powered voice assistant** – open YouTube, se
 - **Speech Recognition:** Web Speech API  
 - **Other Tools:** Axios, Context API
 
+## 🖼️ Screenshots
+
 
 
 
