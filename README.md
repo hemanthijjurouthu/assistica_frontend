@@ -56,3 +56,21 @@ Choose an image for your assistant from the available options to give it a uniqu
 Give your assistant a name to personalize your interaction.
 
 ![Enter Assistant Name](./Screeshots/Customize2.png)
+
+### 💬 Virtual Assistant Chat History
+
+![Assistant Chat History Screenshot](./Screeshots/Siri.png)
+
+### 🖥 Virtual Assistant Interaction
+
+**Question:** What is Java?  
+![](./Screeshots/JavaQ.png)
+
+**Answer:** Java explained by Assistant  
+![](./Screeshots/JavaA.png)
+
+**Question:** TUF-related query  
+![](./Screeshots/TUF.png)
+
+**Answer:** TUF explained by Assistant  
+![](./Screeshots/TUF2.png)
