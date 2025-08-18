@@ -1,5 +1,18 @@
 # 🎙️ Assistica – Your Voice-Enabled Virtual Assistant
 
+---
+
+## 🌐 Live Demo
+
+Check out the live application here: [Assistica Live](https://assistica-frontend.onrender.com/)
+
+---
+
+## 📂 Backend Repository
+
+The backend code is available here: [Assistica Backend GitHub](https://github.com/hemanthijjurouthu/Assistica_Backend)
+
+
 Assistica is a smart **virtual assistant** that lets users interact seamlessly using **voice commands**.  
 It listens to your voice, converts speech to text, processes it with **Google Gemini AI**, and performs actions accordingly.  
 Think of it as your personal **AI-powered voice assistant** – open YouTube, search Google, get quick answers, and more!
@@ -25,23 +38,8 @@ Think of it as your personal **AI-powered voice assistant** – open YouTube, se
 - **Backend:** Node.js, Express.js  
 - **AI Model:** Google Gemini API  
 - **Speech Recognition:** Web Speech API  
-- **Other Tools:** Axios, Context API  
+- **Other Tools:** Axios, Context API
 
----
 
-## 📂 Project Structure
-
-Assistica/
-├── frontend/ # React UI
-│ ├── src/
-│ ├── public/
-│ └── package.json
-├── backend/ # Node.js server
-│ ├── routes/
-│ ├── controllers/
-│ └── package.json
-├── public/ # Static assets
-├── package.json
-├── README.md
 
 
