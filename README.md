@@ -33,7 +33,13 @@ Think of it as your personal **AI-powered voice assistant** – open YouTube, se
 
 Assistica/
 ├── frontend/ # React UI
+│ ├── src/
+│ ├── public/
+│ └── package.json
 ├── backend/ # Node.js server
+│ ├── routes/
+│ ├── controllers/
+│ └── package.json
 ├── public/ # Static assets
 ├── package.json
 ├── README.md
