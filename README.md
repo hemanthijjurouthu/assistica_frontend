@@ -1,12 +1,41 @@
-# React + Vite
+# 🎙️ Assistica – Your Voice-Enabled Virtual Assistant
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Assistica is a smart **virtual assistant** that lets users interact seamlessly using **voice commands**.  
+It listens to your voice, converts speech to text, processes it with **Google Gemini AI**, and performs actions accordingly.  
+Think of it as your personal **AI-powered voice assistant** – open YouTube, search Google, get quick answers, and more!
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- 🎤 **Voice Input** – Speak naturally, and Assistica will understand you.  
+- 🧠 **AI-Powered Responses** – Uses **Gemini** to generate accurate, human-like responses.  
+- 🔗 **Smart Actions** – Perform tasks like:
+  - Opening YouTube & searching videos
+  - Performing Google searches
+  - Answering general queries
+- ⚡ **Real-Time Interaction** – Smooth and fast response handling.  
+- 🖥️ **Interactive UI** – Simple and user-friendly React-based interface.  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend:** React, Tailwind CSS  
+- **Backend:** Node.js, Express.js  
+- **AI Model:** Google Gemini API  
+- **Speech Recognition:** Web Speech API  
+- **Other Tools:** Axios, Context API  
+
+---
+
+## 📂 Project Structure
+
+Assistica/
+├── frontend/ # React UI
+├── backend/ # Node.js server
+├── public/ # Static assets
+├── package.json
+├── README.md
+
+
