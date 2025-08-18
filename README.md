@@ -55,4 +55,4 @@ Choose an image for your assistant from the available options to give it a uniqu
 ### 2️⃣ Enter Your Assistant Name
 Give your assistant a name to personalize your interaction.
 
-![Enter Assistant Name](./Screeshots/Customize2.png) how to reduce the width of the image
+![Enter Assistant Name](./Screeshots/Customize2.png)
