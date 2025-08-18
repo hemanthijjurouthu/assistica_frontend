@@ -4,7 +4,6 @@ import { userDataContext } from "../context/UserContext";
 
 import Navbar from "../components/Navbar";
 import HistoryPanel from "../components/HistoryPanel";
-import VoiceButton from "../components/VoiceButton";
 import Avatar from "../components/Avatar";
 
 import userImg from "../assets/user.gif";
@@ -23,7 +22,6 @@ const Home = () => {
   const recognitionRef = useRef(null);
   const navigate = useNavigate();
 
-  // Logout
   const handleLogout = async () => {
     try {
       await fetch(`${serverUrl}/api/auth/logout`, { credentials: "include" });
@@ -34,7 +32,6 @@ const Home = () => {
     }
   };
 
-  // Command handler for redirects/search
   const handleCommand = (data) => {
     const { type, userInput } = data;
     const query = encodeURIComponent(userInput);
@@ -56,14 +53,16 @@ const Home = () => {
         break;
       case "youtube-search":
       case "youtube-play":
-        window.open(`https://www.youtube.com/results?search_query=${query}`, "_blank");
+        window.open(
+          `https://www.youtube.com/results?search_query=${query}`,
+          "_blank"
+        );
         break;
       default:
         console.log("Unknown command:", type);
     }
   };
 
-  // Speak AI response
   const speak = (text) => {
     if (!window.speechSynthesis) return;
     const utterance = new SpeechSynthesisUtterance(text);
@@ -77,7 +76,6 @@ const Home = () => {
     };
   };
 
-  // Start speech recognition
   const startAssistant = () => {
     const SpeechRecognition =
       window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -112,10 +110,14 @@ const Home = () => {
 
     recognition.start();
     setListening(true);
+
+    const userName = userData?.name || "there";
+    const assistantName = userData?.assistantName || "your assistant";
+    speak(`Hi ${userName}, I'm ${assistantName}. How can I help you today?`);
+
     window.addEventListener("beforeunload", () => recognition.stop());
   };
 
-  // Stop speech recognition
   const stopAssistant = () => {
     if (recognitionRef.current) {
       recognitionRef.current.stop();
@@ -126,8 +128,6 @@ const Home = () => {
 
   return (
     <div className="w-full h-screen bg-gradient-to-t from-black to-[#030353] flex flex-col items-center relative">
-      
-      {/* Navbar */}
       <Navbar
         onToggleHistory={() => setHistoryOpen(!historyOpen)}
         onLogout={handleLogout}
@@ -137,32 +137,60 @@ const Home = () => {
         setIsMobileMenuOpen={setMenuOpen}
       />
 
-      {/* History Panel */}
       <HistoryPanel
         isOpen={historyOpen}
         onClose={() => setHistoryOpen(false)}
         historyItems={userData?.history || []}
       />
 
-      {/* Voice Button */}
-      <VoiceButton
-        isListening={listening}
-        onToggleListening={() => (listening ? stopAssistant() : startAssistant())}
+      <Avatar
+        src={userData?.assistantImage}
+        alt={userData?.assistantName}
+        listening={listening}
       />
-
-      {/* Assistant Avatar */}
-      <Avatar src={userData?.assistantImage} alt={userData?.assistantName} listening={listening}/>
-
-      {/* Assistant Name */}
+      <div className="flex flex-col sm:flex-row gap-4 mt-6 justify-center items-center">
+  {!listening ? (
+    <div
+      onClick={startAssistant}
+      className="cursor-pointer bg-gradient-to-r from-indigo-400 via-blue-500 to-indigo-600 
+                 hover:from-indigo-500 hover:via-blue-600 hover:to-indigo-700 
+                 text-white font-semibold px-8 py-4 rounded-2xl shadow-lg 
+                 text-center transition-all duration-300 transform hover:scale-110"
+    >
+            🎤 Start {userData?.assistantName || "Assistant"}
+    </div>
+  ) : (
+    <div
+      onClick={stopAssistant}
+      className="cursor-pointer bg-gradient-to-r from-pink-500 via-purple-600 to-indigo-700 
+                 hover:from-pink-600 hover:via-purple-700 hover:to-indigo-800 
+                 text-white font-semibold px-8 py-4 rounded-2xl shadow-xl 
+                 text-center transition-all duration-300 transform hover:scale-110 animate-pulse"
+    >
+      🎧 {userData?.assistantName || "Assistant"} is listening... (Click to stop)
+    </div>
+  )}
+</div>
       <h1 className="text-white text-lg sm:text-xl font-semibold text-center mt-4">
-        Hi I'm <span className="text-blue-400">{userData?.assistantName}</span>
+        Hi I'm{" "}
+        <span className="text-blue-400">{userData?.assistantName}</span>
       </h1>
 
-      {/* Conversation Images */}
-      {userText && <img src={userImg} className="w-[150px] sm:w-[200px]" alt="user speaking" />}
-      {aiText && <img src={aiImg} className="w-[150px] sm:w-[200px]" alt="ai speaking" />}
+      {userText && (
+        <img
+          src={userImg}
+          className="w-[150px] sm:w-[200px]"
+          alt="user speaking"
+        />
+      )}
+      {aiText && (
+        <img
+          src={aiImg}
+          className="w-[150px] sm:w-[200px]"
+          alt="ai speaking"
+        />
+      )}
 
-      {/* Conversation Text */}
       {(userText || aiText) && (
         <h1 className="text-white text-base sm:text-xl lg:text-2xl font-semibold text-center mt-4 px-4 py-2 bg-gray-800/50 rounded-xl shadow-md max-w-[90%] sm:max-w-[80%] mx-auto break-words">
           {userText || aiText}

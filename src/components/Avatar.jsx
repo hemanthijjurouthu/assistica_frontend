@@ -5,8 +5,8 @@ const Avatar = ({ src, alt, listening }) => {
     <div
       className={`
         w-[260px] h-[360px] sm:w-[300px] sm:h-[400px]
-        flex justify-center items-center overflow-hidden rounded-3xl shadow-lg flex-col gap-4
-        transition transform
+        flex justify-center items-center overflow-hidden rounded-2xl shadow-lg flex-col gap-4
+        transition transform mt-2
         ${listening 
           ? "scale-105 shadow-2xl shadow-blue-400 animate-pulse" 
           : "hover:shadow-xl hover:shadow-blue-400"}
