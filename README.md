@@ -38,3 +38,11 @@ The backend code is available here: [Assistica Backend GitHub](https://github.co
 - **AI Model:** Google Gemini API  
 - **Speech Recognition:** Web Speech API  
 - **Other Tools:** Axios, Context API
+
+## Screenshots
+
+### Screenshot 1
+
+### Signup Page
+
+![Signup Page](./Screeshots/signup.png)
